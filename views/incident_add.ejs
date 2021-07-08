@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      line-height: 202%;
+      color: #345493;
+      margin-left: 5%;
+      margin-right: 5%;
+      background-color: white;
+    }
+    form.input{
+      border-top: 0;
+    }
+    input[type=text], select {
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+    }
+    .form-control
+    {
+      border-top: 0;
+      border-right:0;
+      border-left: 0;
+    }
+    h3{
+      color: #345493;
+
+    }
+    lable
+    {
+      margin-left: 5%;
+      color: #345493;
+    }
+    #h3{
+      background-color: #345493 ;
+      color: white;
+      width; 100%;
+      text-align: center;
+      padding: 5px;
+      border-radius: 8px;
+    }
+    .form-group
+    {
+      margin-left: 2%;
+    }
+
+    #description
+    {
+      width: 100%;
+
+    }
+
+    #followupaction
+    {
+      width: 100%;
+    }
+    #reportedby
+    {
+      margin-left: 25px;
+          width: 18%;
+    }
+   #titlerole
+   {
+    width: 18%;
+    margin-left: 40px;
+  }
+  #dateofreport
+  {
+    width: 18%;
+    margin-left: 24px;
+  }
+  #incidentno
+  {
+    width: 18%;
+    margin-left: 50px;
+  }
+#datereport
+{
+  margin-left: 32%;
+}
+#incno
+{
+  margin-left: 32%;
+}
+#incidenttype
+{
+  margin-left: 14px;
+  width: 18%;
+}
+#dateofincident
+{
+  margin-left: 8px;
+  width: 18%;
+}
+#dateins
+{
+    margin-left: 32%;
+}
+#location
+{
+  margin-left: 52px;
+      width: 83%;
+
+}
+#city
+{
+  margin-left: 22px;
+    width: 11%;
+ }
+#state
+{
+  margin-left: 22px;
+    width: 11%;
+}
+#stat
+{
+  margin-left: 58px;
+}
+#zipcode
+{
+  margin-left: 80px;
+  width: 18%;
+}
+#zipcod
+{
+  margin-left: 23%;
+}
+#but
+{
+  background-color: #0057b8;
+  border: black;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin-left : 46%;
+  margin-top: 12px;
+  padding: 12px 28px;
+  color: white;
+  border-radius: 8px
+}
+
+
+
+  </style>
+
+
+</head>
+<body>
+
+<div class="container">
+  <h3 > INCIDENT</h3>
+
+
+
+  <form action="/save" method="post">
+    <div class="form-group">
+      <label for="reportedby" id="report1">REPORTED BY:</label>
+      <input type="text" class="form-control" id="reportedby" placeholder=" Reported By " name="reportedby" required>
+      <label for="dateofreport" id="datereport">DATE OF REPORT:</label>
+      <input type="date" class="form-control" id="dateofreport" placeholder="" name="dateofreport" required>
+<br>
+      <label for="titlerole">TITLE/ROLE:</label>
+      <input type="text" class="form-control" id="titlerole" placeholder="Title/Role" name="titlerole" required>
+      <label for="incidentno" id="incno">INCIDENT NO:</label>
+      <input type="text" class="form-control" id="incidentno" placeholder="Incident No" name="incidentno" required>
+
+    </div>
+    <h3 id="h3">INCIDENT INFORMATION</h3>
+    <div class="form-group">
+      <label for="incidenttype">INCIDENT TYPE:</label>
+      <input type="text" class="form-control" id="incidenttype" placeholder="Incident Type" name="incidenttype" required>
+      <label for="dateofincident" id="dateins"> DATE OF INCIDENT:</label>
+      <input type="date" class="form-control" id="dateofincident" placeholder="Date of Incident" name="dateofincident" required>
+<br>
+      <label for="location">LOCATION:</label>
+      <input type="text" class="form-control" id="location" placeholder="Location" name="location" required>
+    <br>
+      <label for="city">CITY:</label>
+      <select name="city"  id="city" name="city" required >
+          <option disabled hidden selected >--Select-City--</option>
+          <option >Pollachi</option>
+          <option  >Coimbatore</option>
+          <option  >Chennai</option>
+          <option  >Selam</option>
+          <option  >Thrichy</option>
+          <option  >Bangaloru</option>
+      </select>
+      <label for="state" id="stat">STATE:</label>
+      <select name="state"  id="state" name="state" required>
+          <option >--Select-State--</option>
+          <option>Tamil Nadu</option>
+          <option>Kerala</option>
+            <option>Bangalore</option>
+          <option>Andhra Pradesh</option>
+          <option>Telengana</option>
+      </select>
+      <label for="zipcode" id="zipcod">ZIP CODE:</label>
+      <input type="text" class="form-control" id="zipcode" size="6" placeholder="Zip Code" name="zipcode" required>
+
+    </div>
+    <hr>
+    <div>
+        <label for="description">INCIDENT DESCRIPTION</label><br>
+        <textarea id="description" name="description" cols="100" rows="5" placeholder="Incident Description" style="background-color: #DBE6FD;"  required></textarea>
+        <br>
+        <label for="followupaction">FOLLOW-UP ACTION:</label><br>
+        <textarea id="followupaction" name="followupaction" cols="100" rows="5" placeholder="Follow-Up Action" style="background-color: #DBE6FD;"  required></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary" id="but">Submit</button>
+    </div>
+  </form>
+
+
+
+</div>
+
+</body>
+</html>
